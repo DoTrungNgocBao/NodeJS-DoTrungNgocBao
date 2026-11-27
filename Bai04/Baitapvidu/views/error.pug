@@ -1,0 +1,50 @@
+
+extends layout
+
+block content
+    .error-page
+        .eyebrow NEXUS X / SYSTEM DIAGNOSTICS
+
+        .error-glow
+            .giant-error-code= status
+
+        h2.error-title= title
+
+        h1= message
+
+        p.error-description= description
+
+        .panel.error-details
+            .panel-heading
+                h2 Error Information
+                span.status-error ● ERROR DETECTED
+
+            .system-row
+                span HTTP Status
+                strong= status
+
+            .system-row
+                span Error Code
+                strong= errorCode
+
+            .system-row
+                span Request Path
+                strong= requestPath
+
+            .system-row
+                span Request Method
+                strong= requestMethod
+
+            .system-row
+                span Timestamp
+                strong= time
+
+            .system-row
+                span Error Handler
+                span.status-success ACTIVE
+
+        .error-actions
+            a.btn.btn-primary(href="/") ← Quay về trang chủ
+            a.btn.btn-secondary(href="/system") Kiểm tra hệ thống
+
+        p.muted NEXUS X — EXPRESS ERROR HANDLING SYSTEM

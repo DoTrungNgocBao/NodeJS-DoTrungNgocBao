@@ -1,0 +1,52 @@
+[
+    {
+        "id": "a0b6104b-bcdb-437d-93a4-37b79c6cbf6a",
+        "firstNumber": 100,
+        "secondNumber": 0,
+        "operation": "divide",
+        "operationName": "Phép chia",
+        "result": null,
+        "status": "error",
+        "message": "Không thể chia cho 0.",
+        "createdAt": "2026-11-27T02:10:18.022Z"
+    },
+    {
+        "id": "3dfe5ad8-0499-43b7-91a5-64ab1dcba3af",
+        "firstNumber": 120,
+        "secondNumber": 30,
+        "operation": "multiply",
+        "operationName": "Phép nhân",
+        "symbol": "×",
+        "expression": "120 × 30 = 3600",
+        "result": 3600,
+        "status": "success",
+        "message": "Tính toán thành công.",
+        "createdAt": "2026-11-27T02:05:01.924Z"
+    },
+    {
+        "id": "817813c6-7c28-49c5-9fea-cb2cb3f2a3af",
+        "firstNumber": 20,
+        "secondNumber": 2,
+        "operation": "multiply",
+        "operationName": "Phép nhân",
+        "symbol": "×",
+        "expression": "20 × 2 = 40",
+        "result": 40,
+        "status": "success",
+        "message": "Tính toán thành công.",
+        "createdAt": "2026-11-27T01:59:31.272Z"
+    },
+    {
+        "id": "ed3ab99e-3bb4-4e7f-960b-6bcec03def45",
+        "firstNumber": 120,
+        "secondNumber": 30,
+        "operation": "divide",
+        "operationName": "Phép chia",
+        "symbol": "÷",
+        "expression": "120 ÷ 30 = 4",
+        "result": 4,
+        "status": "success",
+        "message": "Tính toán thành công.",
+        "createdAt": "2026-11-27T01:36:02.938Z"
+    }
+]

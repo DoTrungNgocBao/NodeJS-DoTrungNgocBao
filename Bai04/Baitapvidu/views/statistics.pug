@@ -1,0 +1,78 @@
+
+extends layout
+
+block content
+    .page-heading
+        .eyebrow PERFORMANCE ANALYTICS
+        h1 Analytics Center
+        p Phân tích dữ liệu và hiệu suất tính toán của hệ thống.
+
+    .metrics-grid
+        .metric-card.cyan
+            .metric-label TỔNG PHÉP TÍNH
+            h2= stats.total
+
+        .metric-card.green
+            .metric-label THÀNH CÔNG
+            h2= stats.success
+
+        .metric-card.red
+            .metric-label THẤT BẠI
+            h2= stats.errors
+
+        .metric-card.purple
+            .metric-label HIỆU SUẤT
+            h2= stats.successRate + "%"
+
+    .dashboard-grid
+        section.panel
+            .panel-heading
+                h2 Tỷ lệ thành công
+                span.tag PERFORMANCE
+
+            .donut-chart(style="--rate:" + stats.successRate + "%")
+                .donut-center
+                    strong= stats.successRate + "%"
+                    small SUCCESS RATE
+
+            .chart-legend
+                span.status-success= "● Thành công: " + stats.success
+                span.status-error= "● Thất bại: " + stats.errors
+
+        section.panel
+            .panel-heading
+                h2 Phân bố phép toán
+                span.tag LIVE DATA
+
+            each item in stats.operationStats
+                .bar-item
+                    .bar-heading
+                        strong= item.symbol + " " + item.name
+                        span= item.count + " lượt | " + item.percentage + "%"
+
+                    .progress-track
+                        .progress-fill(class=item.operation style="width:" + item.percentage + "%")
+
+    section.panel
+        .panel-heading
+            h2 Báo cáo chi tiết
+            a.btn.btn-primary(href="/history/export") Xuất báo cáo
+
+        .table-wrapper
+            table.data-table
+                thead
+                    tr
+                        th Phép toán
+                        th Ký hiệu
+                        th Số lần thành công
+                        th Tỷ lệ
+
+                tbody
+                    each item in stats.operationStats
+                        tr
+                            td= item.name
+                            td= item.symbol
+                            td= item.count
+                            td= item.percentage + "%"
+
+        p.muted Thống kê được tính từ các bản ghi hiện có trong lịch sử.

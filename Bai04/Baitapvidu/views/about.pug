@@ -1,0 +1,89 @@
+
+extends layout
+
+block content
+    .page-heading
+        .eyebrow PROJECT INFORMATION
+        h1 About Project
+        p Giới thiệu bài thực hành Express Framework.
+
+    .hero-banner
+        .hero-content
+            .eyebrow STUDENT PROJECT / VERSION 1.0
+            h2 NEXUS X
+            p SMART CALCULATOR STUDIO
+            span.tag EXPRESS MVC APPLICATION
+
+        .hero-art
+            .orbit.orbit-one
+            .orbit.orbit-two
+            .core NX
+
+    .dashboard-grid
+        section.panel
+            .panel-heading
+                h2 Thông tin sinh viên
+
+            .profile-card
+                .profile-avatar NB
+                h2= student.name
+                p= student.studentId
+                span.tag= student.className
+
+            each item in [{label:"Họ và tên",value:student.name},{label:"Mã sinh viên",value:student.studentId},{label:"Lớp",value:student.className},{label:"Môn học",value:student.subject},{label:"Bài thực hành",value:student.lesson},{label:"Dự án",value:student.project},{label:"Thư mục nộp bài",value:student.repository}]
+                .system-row
+                    span= item.label
+                    strong= item.value
+
+        section.panel
+            .panel-heading
+                h2 Giới thiệu ứng dụng
+
+            p NEXUS X là ứng dụng website tính toán được xây dựng bằng Node.js và Express Framework.
+
+            p Ứng dụng sử dụng mô hình MVC để tách biệt xử lý dữ liệu, điều khiển yêu cầu và hiển thị giao diện.
+
+            h3 Chức năng chính
+
+            ul.feature-list
+                each feature in ["Tính toán cộng, trừ, nhân, chia","Máy tính bàn phím ảo","Kiểm tra dữ liệu đầu vào","Lưu lịch sử bằng JSON","Tìm kiếm và xóa lịch sử","Thống kê phép tính","Xuất báo cáo TXT","REST API","Middleware ghi nhật ký","Xử lý lỗi HTTP 400, 404, 500","Giao diện Responsive"]
+                    li= feature
+
+    section.panel
+        .panel-heading
+            h2 MVC Architecture
+            span.tag DESIGN PATTERN
+
+        .architecture-flow
+            .architecture-node
+                strong BROWSER
+                small HTTP Request
+
+            .flow-arrow ↓
+
+            .architecture-node
+                strong EXPRESS
+                small Routes & Middleware
+
+            .flow-arrow ↓
+
+            .architecture-node
+                strong CONTROLLER
+                small Xử lý yêu cầu
+
+            .flow-arrow ↓
+
+            .architecture-branches
+                .architecture-node
+                    strong MODEL
+                    small Tính toán và JSON
+
+                .architecture-node
+                    strong VIEW
+                    small Pug Template
+
+    .technology-grid
+        each item in [{name:"Node.js",desc:"JavaScript Runtime"},{name:"Express",desc:"Web Framework"},{name:"Pug",desc:"Template Engine"},{name:"CSS / JS",desc:"Frontend Design"}]
+            .technology-card
+                h3= item.name
+                p= item.desc
