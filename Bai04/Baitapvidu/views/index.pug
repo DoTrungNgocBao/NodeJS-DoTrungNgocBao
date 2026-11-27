@@ -1,0 +1,89 @@
+
+extends layout
+
+block content
+    .page-heading
+        .eyebrow EXPRESS FRAMEWORK / MVC
+        h1 Command Center
+        p Chào mừng đến với không gian tính toán thông minh.
+
+    .hero-banner
+        .hero-content
+            .eyebrow NEXT GENERATION CALCULATOR
+            h2 NEXUS X
+            p Hệ thống tính toán hiện đại trên nền tảng Express.
+            a.btn.btn-primary(href="/calculator") Bắt đầu tính toán →
+        .hero-art
+            .orbit.orbit-one
+            .orbit.orbit-two
+            .core X
+
+    .metrics-grid
+        .metric-card.cyan
+            .metric-label TỔNG PHÉP TÍNH
+            h2#totalCount= stats.total
+            small Total calculations
+
+        .metric-card.green
+            .metric-label THÀNH CÔNG
+            h2#successCount= stats.success
+            small Successful operations
+
+        .metric-card.red
+            .metric-label LỖI TÍNH TOÁN
+            h2#errorCount= stats.errors
+            small Failed operations
+
+        .metric-card.purple
+            .metric-label TỶ LỆ THÀNH CÔNG
+            h2#successRate= stats.successRate + "%"
+            small System performance
+
+    .dashboard-grid
+        section.panel
+            .panel-heading
+                h2 Smart Calculator
+                span.tag INTERACTIVE
+
+            .calculator-screen
+                #calcExpression.screen-expression READY TO CALCULATE
+                #calcDisplay.screen-result 0
+
+            .calculator-keys
+                each key in ["AC", "⌫", "±", "÷", "7", "8", "9", "×", "4", "5", "6", "-", "1", "2", "3", "+", "0", "00", ".", "="]
+                    button.calc-key(type="button" data-key=key class=key === "=" ? "equals" : ["+", "-", "×", "÷"].includes(key) ? "operator" : key === "AC" ? "clear" : "")= key
+
+            p.muted Hỗ trợ số âm, số thập phân và bốn phép toán cơ bản.
+
+        section.panel
+            .panel-heading
+                h2 Hoạt động gần đây
+                a.text-link(href="/history") Xem tất cả →
+
+            #recentHistory.activity-list
+                if stats.recent.length
+                    each item in stats.recent
+                        .activity-item
+                            span.activity-icon= item.status === "success" ? "✓" : "!"
+                            .activity-content
+                                strong= item.expression || item.message
+                                small= new Date(item.createdAt).toLocaleString("vi-VN")
+                            span(class=item.status === "success" ? "status-success" : "status-error")= item.status === "success" ? "SUCCESS" : "ERROR"
+                else
+                    p.empty-state Chưa có phép tính nào.
+
+            .panel-divider
+
+            h3 System Architecture
+
+            each item in ["Model", "View / Pug", "Controller", "Express Middleware"]
+                .system-row
+                    span= item
+                    span.status-success ● ACTIVE
+
+    .technology-grid
+        each tech in [{name:"NODE.JS",desc:"Runtime Environment",icon:"JS"},{name:"EXPRESS",desc:"Web Framework",icon:"EX"},{name:"PUG",desc:"Template Engine",icon:"PG"},{name:"MVC",desc:"Architecture",icon:"MV"}]
+            .technology-card
+                .technology-icon= tech.icon
+                h3= tech.name
+                p= tech.desc

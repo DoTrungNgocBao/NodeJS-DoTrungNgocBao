@@ -1,0 +1,101 @@
+
+extends layout
+
+block content
+    .page-heading
+        .eyebrow SERVER DIAGNOSTICS
+        h1 System Monitor
+        p Giám sát thông tin máy chủ Express.
+
+    .hero-banner
+        .hero-content
+            .eyebrow SERVER STATUS
+            h2 SYSTEM ONLINE
+            p Máy chủ đang hoạt động.
+            span.status-success ● EXPRESS SERVER ACTIVE
+
+        .hero-art
+            .orbit.orbit-one
+            .orbit.orbit-two
+            .core ⚙
+
+    .metrics-grid
+        .metric-card.green
+            .metric-label TRẠNG THÁI
+            h2= systemInfo.status
+
+        .metric-card.cyan
+            .metric-label NODE.JS
+            h2= systemInfo.nodeVersion
+
+        .metric-card.purple
+            .metric-label SERVER PORT
+            h2= systemInfo.port
+
+        .metric-card.cyan
+            .metric-label CPU CORES
+            h2= systemInfo.cpuCores
+
+    .dashboard-grid
+        section.panel
+            .panel-heading
+                h2 Server Information
+                span.tag HARDWARE
+
+            each item in [{label:"Hệ điều hành",value:systemInfo.osType},{label:"Nền tảng",value:systemInfo.platform},{label:"Kiến trúc CPU",value:systemInfo.architectureCPU},{label:"Số lõi CPU",value:systemInfo.cpuCores},{label:"Tổng RAM",value:systemInfo.totalMemory},{label:"RAM khả dụng",value:systemInfo.freeMemory},{label:"Heap đang sử dụng",value:systemInfo.heapUsed},{label:"Thời gian hoạt động",value:systemInfo.uptime},{label:"Thời gian máy chủ",value:systemInfo.serverTime}]
+                .system-row
+                    span= item.label
+                    strong= item.value
+
+        section.panel
+            .panel-heading
+                h2 Software Architecture
+                span.tag SOFTWARE
+
+            each item in ["Node.js Runtime","Express Framework","Pug Template Engine","MVC Architecture","Body-parser","Logger Middleware","Error Handler","JSON Storage"]
+                .system-row
+                    span= item
+                    span.status-success ● ACTIVE
+
+            a.btn.btn-secondary.btn-block(href="/system") Cập nhật thông tin
+
+    section.panel
+        .panel-heading
+            h2 HTTP Error Testing
+            span.tag DEVELOPER TOOLS
+
+        p.muted Kiểm tra cơ chế xử lý lỗi của Express trên localhost.
+
+        .technology-grid
+            .technology-card
+                .error-number 400
+                h3 Bad Request
+                p Yêu cầu không hợp lệ
+                a.btn.btn-secondary(href="/test/400") Kiểm tra
+
+            .technology-card
+                .error-number 404
+                h3 Not Found
+                p Đường dẫn không tồn tại
+                a.btn.btn-secondary(href="/page-not-found") Kiểm tra
+
+            .technology-card
+                .error-number 500
+                h3 Server Error
+                p Mô phỏng lỗi máy chủ
+                a.btn.btn-secondary(href="/test/500") Kiểm tra
+
+    section.panel
+        h2 REST API
+
+        .system-row
+            span GET /api/history
+            a.text-link(href="/api/history" target="_blank" rel="noopener") Xem JSON →
+
+        .system-row
+            span GET /api/statistics
+            a.text-link(href="/api/statistics" target="_blank" rel="noopener") Xem JSON →
+
+        .system-row
+            span POST /api/calculate
+            strong Calculation API
