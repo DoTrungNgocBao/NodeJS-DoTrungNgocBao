@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Liên hệ | BAO.DEV</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- HIEU UNG NEN -->
+    <div id="scrollProgress"></div>
+    <div class="background-grid"></div>
+    <div class="glow glow-blue"></div>
+    <div class="glow glow-purple"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="/" class="logo">
+                &lt; BAO<span>.DEV</span> /&gt;
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="/">Trang chủ</a>
+                <a href="/about">Giới thiệu</a>
+                <a href="/skills">Kỹ năng</a>
+                <a href="/hobbies">Sở thích</a>
+
+                <a href="/contact" class="active">
+                    Liên hệ
+                </a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <button id="themeToggle"
+                        class="icon-button"
+                        aria-label="Đổi giao diện">
+                    ☀
+                </button>
+
+                <button id="menuToggle"
+                        class="icon-button menu-toggle"
+                        aria-label="Mở menu"
+                        aria-expanded="false">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <!-- TIEU DE -->
+        <section class="page-heading">
+
+            <span class="section-label">
+                04 / CONTACT ME
+            </span>
+
+            <h1>
+                Let's
+                <span class="gradient-text">
+                    Connect.
+                </span>
+            </h1>
+
+            <p>
+                Kết nối, chia sẻ và cùng nhau phát triển.
+            </p>
+
+        </section>
+
+        <!-- THONG TIN LIEN HE -->
+        <section class="contact-grid">
+
+            <div class="contact-info">
+
+                <span class="section-label">
+                    GET IN TOUCH
+                </span>
+
+                <h2>
+                    Hãy cùng
+                    <span class="gradient-text">
+                        kết nối
+                    </span>
+                </h2>
+
+                <p>
+                    Chào mừng bạn đến với trang liên hệ
+                    của BAO.DEV. Đây là nơi giới thiệu
+                    dự án và thử nghiệm chức năng
+                    gửi lời nhắn bằng Express.
+                </p>
+
+                <!-- GITHUB -->
+                <article class="contact-card">
+
+                    <div class="contact-icon">
+                        Git
+                    </div>
+
+                    <div>
+
+                        <h3>GitHub</h3>
+
+                        <p>
+                            Khám phá mã nguồn dự án
+                            và các bài tập lập trình.
+                        </p>
+
+                        <a href="https://github.com/DoTrungNgocBao/NodeJS-DoTrungNgocBao"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Xem Repository ↗
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- DEVELOPER -->
+                <article class="contact-card">
+
+                    <div class="contact-icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <div>
+
+                        <h3>Developer</h3>
+
+                        <p>Đỗ Trung Ngọc Bảo</p>
+
+                        <p>IT Student & Web Developer</p>
+
+                        <a href="/about">
+                            Xem hồ sơ →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- WEBSITE -->
+                <article class="contact-card">
+
+                    <div class="contact-icon">
+                        WWW
+                    </div>
+
+                    <div>
+
+                        <h3>Website</h3>
+
+                        <p>BAO.DEV Portfolio V2.0</p>
+
+                        <a href="/">
+                            Truy cập trang chủ →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- SERVER -->
+                <article class="contact-card">
+
+                    <div class="contact-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+
+                        <h3>Server Status</h3>
+
+                        <p>
+                            Express Server:
+                            <strong id="serverStatus">
+                                Checking...
+                            </strong>
+                        </p>
+
+                        <a href="/api/status"
+                           target="_blank"
+                           rel="noopener">
+
+                            Kiểm tra API ↗
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- FORM LIEN HE -->
+            <div class="contact-form-card">
+
+                <div class="form-heading">
+
+                    <span class="section-label">
+                        MESSAGE TERMINAL
+                    </span>
+
+                    <h2>Gửi lời nhắn</h2>
+
+                    <p>
+                        Nhập thông tin mẫu để kiểm tra
+                        chức năng xử lý dữ liệu.
+                    </p>
+
+                </div>
+
+                <form id="contactForm"
+                      action="/contact"
+                      method="POST">
+
+                    <!-- HO TEN -->
+                    <div class="form-group">
+
+                        <label for="name">
+                            Họ và tên *
+                        </label>
+
+                        <input type="text"
+                               id="name"
+                               name="name"
+                               placeholder="Nhập họ và tên"
+                               maxlength="100"
+                               required>
+
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email *
+                        </label>
+
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="demo@example.com"
+                               maxlength="254"
+                               required>
+
+                    </div>
+
+                    <!-- NOI DUNG -->
+                    <div class="form-group">
+
+                        <label for="message">
+                            Nội dung lời nhắn *
+                        </label>
+
+                        <textarea id="message"
+                                  name="message"
+                                  rows="7"
+                                  maxlength="2000"
+                                  placeholder="Nhập lời nhắn thử nghiệm..."
+                                  required></textarea>
+
+                        <div class="character-counter">
+
+                            <span id="charCount">0</span>
+                            / 2000 ký tự
+
+                        </div>
+
+                    </div>
+
+                    <!-- NUT CHUC NANG -->
+                    <div class="form-actions">
+
+                        <button type="submit"
+                                id="submitBtn"
+                                class="btn btn-primary">
+
+                            ✉ Gửi lời nhắn
+
+                        </button>
+
+                        <button type="reset"
+                                id="resetBtn"
+                                class="btn btn-outline">
+
+                            ↻ Xóa nội dung
+
+                        </button>
+
+                    </div>
+
+                    <!-- THONG BAO KET QUA -->
+                    <div id="formResult"
+                         class="form-result"
+                         role="status"
+                         aria-live="polite"
+                         hidden>
+                    </div>
+
+                </form>
+
+                <!-- LUU Y -->
+                <div class="privacy-note">
+
+                    <span>ⓘ</span>
+
+                    <p>
+                        Đây là biểu mẫu thực hành Node.js
+                        và Express. Hãy sử dụng dữ liệu mẫu.
+                        Website không gửi email thực tế
+                        và không lưu thông tin liên hệ.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUY TRINH XU LY -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    Quy trình
+                    <span class="gradient-text">
+                        xử lý dữ liệu
+                    </span>
+                </h2>
+
+                <p>
+                    Cách Frontend giao tiếp với
+                    Backend Express Server.
+                </p>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">01</div>
+
+                    <h3>Nhập thông tin</h3>
+
+                    <p>
+                        Người dùng nhập tên, email
+                        và nội dung lời nhắn.
+                    </p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">02</div>
+
+                    <h3>Kiểm tra dữ liệu</h3>
+
+                    <p>
+                        Kiểm tra các trường bắt buộc,
+                        định dạng email và độ dài.
+                    </p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">03</div>
+
+                    <h3>Gửi Request</h3>
+
+                    <p>
+                        JavaScript gửi yêu cầu POST
+                        đến đường dẫn /contact.
+                    </p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">04</div>
+
+                    <h3>Nhận Response</h3>
+
+                    <p>
+                        Express xử lý và trả về
+                        kết quả dưới dạng JSON.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- API TERMINAL -->
+        <section class="section developer-section">
+
+            <div class="terminal-card">
+
+                <div class="terminal-header">
+
+                    <div class="terminal-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span>contact-api.js</span>
+
+                    <button id="copyCode"
+                            class="small-button">
+                        Copy
+                    </button>
+
+                </div>
+
+                <pre><code id="developerCode">fetch("/contact", {
+    method: "POST",
+
+    headers: {
+        "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify({
+        name: "Demo User",
+        email: "demo@example.com",
+        message: "Hello BAO.DEV!"
+    })
+})
+.then(response => response.json())
+.then(data => console.log(data));</code></pre>
+
+            </div>
+
+            <div class="developer-info">
+
+                <span class="section-label">
+                    BACKEND CONNECTION
+                </span>
+
+                <h2>
+                    Frontend
+                    <span class="gradient-text">
+                        × Backend
+                    </span>
+                </h2>
+
+                <p>
+                    Biểu mẫu liên hệ sử dụng JavaScript
+                    Fetch API để gửi dữ liệu đến
+                    Express Server mà không cần
+                    tải lại toàn bộ trang.
+                </p>
+
+                <p>
+                    Server kiểm tra dữ liệu và trả về
+                    thông báo thành công hoặc lỗi.
+                </p>
+
+                <a href="/api/status"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn btn-outline">
+
+                    Xem Server API ↗
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- DIEU HUONG -->
+        <section class="cta-section">
+
+            <span class="section-label">
+                THANK YOU FOR VISITING
+            </span>
+
+            <h2>
+                See You
+                <span class="gradient-text">
+                    Again.
+                </span>
+            </h2>
+
+            <p>
+                Cảm ơn bạn đã khám phá
+                website BAO.DEV.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/hobbies"
+                   class="btn btn-outline">
+                    ← Sở thích
+                </a>
+
+                <a href="/"
+                   class="btn btn-primary">
+                    Về trang chủ →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="/" class="logo">
+                    &lt; BAO<span>.DEV</span> /&gt;
+                </a>
+
+                <p>Personal Portfolio Website</p>
+                <p>Node.js · Express Framework</p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="/">Trang chủ</a>
+                <a href="/about">Giới thiệu</a>
+                <a href="/skills">Kỹ năng</a>
+                <a href="/hobbies">Sở thích</a>
+                <a href="/contact">Liên hệ</a>
+                <a href="/404-test">Kiểm tra lỗi 404</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 BAO.DEV |
+            Designed with HTML, CSS & JavaScript
+
+        </div>
+
+    </footer>
+
+    <!-- NUT VE DAU TRANG -->
+    <button id="backToTop"
+            class="back-to-top"
+            aria-label="Về đầu trang">
+        ↑
+    </button>
+
+    <!-- THONG BAO -->
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
