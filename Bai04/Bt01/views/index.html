@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="BAO.DEV - Personal Portfolio">
+
+    <title>BAO.DEV | Personal Portfolio</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- THANH TIEN DO CUON TRANG -->
+    <div id="scrollProgress"></div>
+
+    <!-- HIEU UNG NEN -->
+    <div class="background-grid"></div>
+    <div class="glow glow-blue"></div>
+    <div class="glow glow-purple"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="/" class="logo">
+                &lt; BAO<span>.DEV</span> /&gt;
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="/" class="active">Trang chủ</a>
+                <a href="/about">Giới thiệu</a>
+                <a href="/skills">Kỹ năng</a>
+                <a href="/hobbies">Sở thích</a>
+                <a href="/contact">Liên hệ</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button id="themeToggle"
+                        class="icon-button"
+                        aria-label="Đổi giao diện">
+                    ☀
+                </button>
+
+                <button id="menuToggle"
+                        class="icon-button menu-toggle"
+                        aria-label="Mở menu"
+                        aria-expanded="false">
+                    ☰
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- TRANG CHU -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    WELCOME TO MY DIGITAL WORLD
+                </div>
+
+                <p class="hero-intro">
+                    Xin chào, tôi là
+                </p>
+
+                <h1 class="hero-title">
+                    Đỗ Trung<br>
+                    <span class="gradient-text">
+                        Ngọc Bảo
+                    </span>
+                </h1>
+
+                <h2 class="hero-role">
+                    <span id="typingText">
+                        IT Student
+                    </span>
+                    <span class="typing-cursor">|</span>
+                </h2>
+
+                <p class="hero-description">
+                    Tôi là sinh viên ngành Công nghệ thông tin,
+                    yêu thích lập trình, khám phá công nghệ
+                    và xây dựng những sản phẩm phần mềm
+                    sáng tạo, hiện đại và hữu ích.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="/about" class="btn btn-primary">
+                        Khám phá hồ sơ →
+                    </a>
+
+                    <a href="/contact" class="btn btn-outline">
+                        Liên hệ
+                    </a>
+
+                </div>
+
+                <div class="tech-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                </div>
+
+            </div>
+
+            <!-- AVATAR CONG NGHE -->
+            <div class="hero-visual">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+
+                <div class="avatar-core">
+                    <span>NB</span>
+                    <small>DEVELOPER</small>
+                </div>
+
+                <div class="floating-card float-one">
+                    &lt;/&gt; Web Developer
+                </div>
+
+                <div class="floating-card float-two">
+                    JS · Node.js
+                </div>
+
+                <div class="floating-card float-three">
+                    ◈ Express
+                </div>
+
+                <div class="floating-card float-four">
+                    DB · Database
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- THONG KE -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="card-icon">01</div>
+                <h3>05</h3>
+                <p>Trang chức năng</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="card-icon">02</div>
+                <h3>04</h3>
+                <p>Nhóm kỹ năng</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="card-icon">03</div>
+                <h3>Express</h3>
+                <p>Web Framework</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="card-icon">04</div>
+                <h3 id="serverStatus">Checking...</h3>
+                <p>Trạng thái Server</p>
+            </article>
+
+        </section>
+
+        <!-- THONG TIN NOI BAT -->
+        <section class="section">
+
+            <div class="section-heading">
+                <span class="section-label">
+                    01 / DISCOVER
+                </span>
+
+                <h2>
+                    Khám phá
+                    <span class="gradient-text">
+                        thế giới của tôi
+                    </span>
+                </h2>
+
+                <p>
+                    Tìm hiểu về bản thân, kỹ năng
+                    và những điều tôi yêu thích.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <div class="feature-icon">01</div>
+                    <h3>Giới thiệu bản thân</h3>
+                    <p>
+                        Hành trình học tập, định hướng
+                        và mục tiêu phát triển.
+                    </p>
+                    <a href="/about">Khám phá →</a>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">&lt;/&gt;</div>
+                    <h3>Kỹ năng công nghệ</h3>
+                    <p>
+                        Các ngôn ngữ lập trình,
+                        cơ sở dữ liệu và công cụ.
+                    </p>
+                    <a href="/skills">Xem kỹ năng →</a>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">♫</div>
+                    <h3>Sở thích cá nhân</h3>
+                    <p>
+                        Lập trình, âm nhạc,
+                        thiết kế và khám phá công nghệ.
+                    </p>
+                    <a href="/hobbies">Tìm hiểu →</a>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">✉</div>
+                    <h3>Kết nối</h3>
+                    <p>
+                        Khám phá biểu mẫu liên hệ
+                        và gửi lời nhắn thử nghiệm.
+                    </p>
+                    <a href="/contact">Liên hệ →</a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- CODE TERMINAL -->
+        <section class="section developer-section">
+
+            <div class="terminal-card">
+
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span>developer.js</span>
+
+                    <button id="copyCode"
+                            class="small-button">
+                        Copy
+                    </button>
+                </div>
+
+                <pre><code id="developerCode">const developer = {
+    name: "Do Trung Ngoc Bao",
+    role: "IT Student",
+    major: "Information Technology",
+
+    skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express"
+    ],
+
+    passion: "Technology",
+    status: "Keep learning"
+};
+
+console.log("Welcome to BAO.DEV");</code></pre>
+
+            </div>
+
+            <div class="developer-info">
+
+                <span class="section-label">
+                    02 / DEVELOPER MODE
+                </span>
+
+                <h2>
+                    Code.
+                    <span class="gradient-text">
+                        Create.
+                    </span>
+                    Repeat.
+                </h2>
+
+                <p>
+                    Mỗi dòng code là một cơ hội
+                    để học hỏi và phát triển.
+                    Website này được xây dựng bằng
+                    Node.js và Express Framework.
+                </p>
+
+                <a href="/api/profile"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn btn-outline">
+                    Xem Profile API ↗
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- SERVER MONITOR -->
+        <section class="section">
+
+            <div class="section-heading">
+                <span class="section-label">
+                    03 / SYSTEM MONITOR
+                </span>
+                <h2>Trạng thái hệ thống</h2>
+            </div>
+
+            <div class="system-panel">
+
+                <div class="system-item">
+                    <span>Application</span>
+                    <strong>BAO.DEV</strong>
+                </div>
+
+                <div class="system-item">
+                    <span>Framework</span>
+                    <strong>Express</strong>
+                </div>
+
+                <div class="system-item">
+                    <span>Version</span>
+                    <strong>2.0.0</strong>
+                </div>
+
+                <div class="system-item">
+                    <span>Server Status</span>
+                    <strong id="systemStatus">
+                        Checking...
+                    </strong>
+                </div>
+
+                <div class="system-item">
+                    <span>Uptime</span>
+                    <strong id="serverUptime">--</strong>
+                </div>
+
+                <div class="system-item">
+                    <span>Last Update</span>
+                    <strong id="lastUpdate">--</strong>
+                </div>
+
+                <div class="system-actions">
+
+                    <button id="refreshStatus"
+                            class="btn btn-primary">
+                        ↻ Làm mới trạng thái
+                    </button>
+
+                    <a href="/api/status"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn btn-outline">
+                        Xem API ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LIEN HE -->
+        <section class="cta-section">
+
+            <span class="section-label">
+                LET'S CONNECT
+            </span>
+
+            <h2>
+                Cùng khám phá
+                <span class="gradient-text">
+                    công nghệ
+                </span>
+            </h2>
+
+            <p>
+                Không ngừng học hỏi,
+                sáng tạo và phát triển mỗi ngày.
+            </p>
+
+            <a href="/contact" class="btn btn-primary">
+                Kết nối ngay →
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <a href="/" class="logo">
+                    &lt; BAO<span>.DEV</span> /&gt;
+                </a>
+
+                <p>Personal Portfolio Website</p>
+                <p>Node.js · Express Framework</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="/">Trang chủ</a>
+                <a href="/about">Giới thiệu</a>
+                <a href="/skills">Kỹ năng</a>
+                <a href="/hobbies">Sở thích</a>
+                <a href="/contact">Liên hệ</a>
+                <a href="/404-test">Kiểm tra lỗi 404</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 BAO.DEV |
+            Designed with HTML, CSS & JavaScript
+        </div>
+
+    </footer>
+
+    <!-- NUT LEN DAU TRANG -->
+    <button id="backToTop"
+            class="back-to-top"
+            aria-label="Về đầu trang">
+        ↑
+    </button>
+
+    <!-- THONG BAO -->
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

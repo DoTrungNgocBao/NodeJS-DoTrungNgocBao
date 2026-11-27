@@ -1,0 +1,835 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Kỹ năng | BAO.DEV</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- HIEU UNG NEN -->
+    <div id="scrollProgress"></div>
+    <div class="background-grid"></div>
+    <div class="glow glow-blue"></div>
+    <div class="glow glow-purple"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="/" class="logo">
+                &lt; BAO<span>.DEV</span> /&gt;
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="/">Trang chủ</a>
+                <a href="/about">Giới thiệu</a>
+                <a href="/skills" class="active">
+                    Kỹ năng
+                </a>
+                <a href="/hobbies">Sở thích</a>
+                <a href="/contact">Liên hệ</a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <button id="themeToggle"
+                        class="icon-button"
+                        aria-label="Đổi giao diện">
+                    ☀
+                </button>
+
+                <button id="menuToggle"
+                        class="icon-button menu-toggle"
+                        aria-label="Mở menu"
+                        aria-expanded="false">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <!-- TIEU DE -->
+        <section class="page-heading">
+
+            <span class="section-label">
+                02 / TECH STACK
+            </span>
+
+            <h1>
+                Kỹ năng
+                <span class="gradient-text">
+                    công nghệ
+                </span>
+            </h1>
+
+            <p>
+                Build. Learn. Create. Innovate.
+            </p>
+
+        </section>
+
+        <!-- THONG KE -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="card-icon">01</div>
+                <h3>12</h3>
+                <p>Công nghệ</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="card-icon">02</div>
+                <h3>04</h3>
+                <p>Nhóm kỹ năng</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="card-icon">03</div>
+                <h3>01</h3>
+                <p>Đam mê công nghệ</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="card-icon">04</div>
+                <h3>∞</h3>
+                <p>Không ngừng học hỏi</p>
+            </article>
+
+        </section>
+
+        <!-- DANH SACH KY NANG -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    MY TECHNOLOGIES
+                </span>
+
+                <h2>
+                    Technology
+                    <span class="gradient-text">
+                        Stack
+                    </span>
+                </h2>
+
+                <p>
+                    Những công nghệ và công cụ
+                    tôi đang tìm hiểu, học tập
+                    và thực hành.
+                </p>
+
+            </div>
+
+            <!-- BO LOC KY NANG -->
+            <div class="filter-bar">
+
+                <button class="filter-btn active"
+                        data-filter="all">
+                    Tất cả
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="frontend">
+                    Frontend
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="backend">
+                    Backend
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="database">
+                    Database
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="tools">
+                    Tools
+                </button>
+
+            </div>
+
+            <p id="skillCount" class="skill-count">
+                Hiển thị 12 công nghệ
+            </p>
+
+            <div class="skills-grid" id="skillsGrid">
+
+                <!-- HTML -->
+                <article class="skill-card"
+                         data-category="frontend">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#f97316">
+                        HTML
+                    </div>
+
+                    <span class="skill-category">
+                        FRONTEND
+                    </span>
+
+                    <h3>HTML5</h3>
+
+                    <p>
+                        Xây dựng cấu trúc và nội dung
+                        cho các trang website.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Semantic</span>
+                        <span>Forms</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- CSS -->
+                <article class="skill-card"
+                         data-category="frontend">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#38bdf8">
+                        CSS
+                    </div>
+
+                    <span class="skill-category">
+                        FRONTEND
+                    </span>
+
+                    <h3>CSS3</h3>
+
+                    <p>
+                        Thiết kế giao diện, hiệu ứng
+                        và bố cục responsive.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Flexbox</span>
+                        <span>Grid</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- JAVASCRIPT -->
+                <article class="skill-card"
+                         data-category="frontend">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#facc15">
+                        JS
+                    </div>
+
+                    <span class="skill-category">
+                        FRONTEND
+                    </span>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Xử lý sự kiện, tương tác
+                        và chức năng trên website.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>DOM</span>
+                        <span>Events</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- REACT NATIVE -->
+                <article class="skill-card"
+                         data-category="frontend">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#67e8f9">
+                        RN
+                    </div>
+
+                    <span class="skill-category">
+                        FRONTEND
+                    </span>
+
+                    <h3>React Native</h3>
+
+                    <p>
+                        Xây dựng giao diện ứng dụng
+                        di động đa nền tảng.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Expo</span>
+                        <span>Components</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- NODEJS -->
+                <article class="skill-card"
+                         data-category="backend">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#4ade80">
+                        JS
+                    </div>
+
+                    <span class="skill-category">
+                        BACKEND
+                    </span>
+
+                    <h3>Node.js</h3>
+
+                    <p>
+                        Xây dựng Web Server và
+                        xử lý JavaScript phía máy chủ.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>HTTP</span>
+                        <span>Modules</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- EXPRESS -->
+                <article class="skill-card"
+                         data-category="backend">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#a78bfa">
+                        EX
+                    </div>
+
+                    <span class="skill-category">
+                        BACKEND
+                    </span>
+
+                    <h3>Express</h3>
+
+                    <p>
+                        Xây dựng website, Routing,
+                        Middleware và REST API.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Routing</span>
+                        <span>REST API</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- C SHARP -->
+                <article class="skill-card"
+                         data-category="backend">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#c084fc">
+                        C#
+                    </div>
+
+                    <span class="skill-category">
+                        BACKEND
+                    </span>
+
+                    <h3>C#</h3>
+
+                    <p>
+                        Lập trình hướng đối tượng
+                        và phát triển ứng dụng .NET.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>.NET</span>
+                        <span>OOP</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- MONGODB -->
+                <article class="skill-card"
+                         data-category="database">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#22c55e">
+                        DB
+                    </div>
+
+                    <span class="skill-category">
+                        DATABASE
+                    </span>
+
+                    <h3>MongoDB</h3>
+
+                    <p>
+                        Lưu trữ và quản lý dữ liệu
+                        bằng cơ sở dữ liệu NoSQL.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>NoSQL</span>
+                        <span>CRUD</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- SQL SERVER -->
+                <article class="skill-card"
+                         data-category="database">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#f87171">
+                        SQL
+                    </div>
+
+                    <span class="skill-category">
+                        DATABASE
+                    </span>
+
+                    <h3>SQL Server</h3>
+
+                    <p>
+                        Thiết kế bảng, truy vấn
+                        và quản lý cơ sở dữ liệu.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>SQL</span>
+                        <span>JOIN</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang học
+                    </span>
+
+                </article>
+
+                <!-- VS CODE -->
+                <article class="skill-card"
+                         data-category="tools">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#38bdf8">
+                        VS
+                    </div>
+
+                    <span class="skill-category">
+                        TOOLS
+                    </span>
+
+                    <h3>Visual Studio Code</h3>
+
+                    <p>
+                        Soạn thảo mã nguồn, chạy
+                        Terminal và phát triển website.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Editor</span>
+                        <span>Terminal</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang sử dụng
+                    </span>
+
+                </article>
+
+                <!-- GITHUB -->
+                <article class="skill-card"
+                         data-category="tools">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#94a3b8">
+                        Git
+                    </div>
+
+                    <span class="skill-category">
+                        TOOLS
+                    </span>
+
+                    <h3>GitHub</h3>
+
+                    <p>
+                        Lưu trữ mã nguồn, quản lý
+                        phiên bản và nộp bài tập.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Git</span>
+                        <span>Repository</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang sử dụng
+                    </span>
+
+                </article>
+
+                <!-- VISUAL STUDIO -->
+                <article class="skill-card"
+                         data-category="tools">
+
+                    <div class="skill-icon"
+                         style="--skill-color:#a855f7">
+                        VS
+                    </div>
+
+                    <span class="skill-category">
+                        TOOLS
+                    </span>
+
+                    <h3>Visual Studio</h3>
+
+                    <p>
+                        Phát triển các ứng dụng C#,
+                        .NET và ASP.NET Core.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>IDE</span>
+                        <span>.NET</span>
+                    </div>
+
+                    <span class="learning-status">
+                        ● Đang sử dụng
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- LO TRINH HOC TAP -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    LEARNING ROADMAP
+                </span>
+
+                <h2>
+                    Lộ trình
+                    <span class="gradient-text">
+                        phát triển
+                    </span>
+                </h2>
+
+                <p>
+                    Mục tiêu nâng cao kiến thức
+                    và kỹ năng lập trình.
+                </p>
+
+            </div>
+
+            <div class="timeline">
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-label">
+                            LEVEL 01
+                        </span>
+
+                        <h3>Frontend Development</h3>
+
+                        <p>
+                            HTML, CSS, JavaScript
+                            và thiết kế giao diện.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-label">
+                            LEVEL 02
+                        </span>
+
+                        <h3>Backend Development</h3>
+
+                        <p>
+                            Node.js, Express,
+                            Routing và REST API.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-label">
+                            LEVEL 03
+                        </span>
+
+                        <h3>Database Management</h3>
+
+                        <p>
+                            MongoDB, SQL Server
+                            và quản lý dữ liệu.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-label">
+                            LEVEL 04
+                        </span>
+
+                        <h3>Full Stack Development</h3>
+
+                        <p>
+                            Kết hợp Frontend, Backend
+                            và Database để xây dựng
+                            ứng dụng hoàn chỉnh.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- CODE TERMINAL -->
+        <section class="section developer-section">
+
+            <div class="terminal-card">
+
+                <div class="terminal-header">
+
+                    <div class="terminal-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span>skills.js</span>
+
+                    <button id="copyCode"
+                            class="small-button">
+                        Copy
+                    </button>
+
+                </div>
+
+                <pre><code id="developerCode">const techStack = {
+    frontend: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React Native"
+    ],
+
+    backend: [
+        "Node.js",
+        "Express",
+        "C#"
+    ],
+
+    database: [
+        "MongoDB",
+        "SQL Server"
+    ],
+
+    tools: [
+        "VS Code",
+        "GitHub",
+        "Visual Studio"
+    ]
+};
+
+console.log("Never stop learning!");</code></pre>
+
+            </div>
+
+            <div class="developer-info">
+
+                <span class="section-label">
+                    DEVELOPER MINDSET
+                </span>
+
+                <h2>
+                    Learn.
+                    <span class="gradient-text">
+                        Build.
+                    </span>
+                    Improve.
+                </h2>
+
+                <p>
+                    Không chỉ học lý thuyết,
+                    tôi còn hướng đến việc thực hành
+                    và xây dựng các dự án thực tế
+                    để nâng cao kỹ năng.
+                </p>
+
+                <a href="/api/profile"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn btn-outline">
+
+                    Xem Profile API ↗
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- DIEU HUONG -->
+        <section class="cta-section">
+
+            <span class="section-label">
+                NEXT CHAPTER
+            </span>
+
+            <h2>
+                Khám phá
+                <span class="gradient-text">
+                    sở thích cá nhân
+                </span>
+            </h2>
+
+            <p>
+                Những điều mang lại cảm hứng
+                trong học tập và cuộc sống.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/about"
+                   class="btn btn-outline">
+                    ← Giới thiệu
+                </a>
+
+                <a href="/hobbies"
+                   class="btn btn-primary">
+                    Xem sở thích →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="/" class="logo">
+                    &lt; BAO<span>.DEV</span> /&gt;
+                </a>
+
+                <p>Personal Portfolio Website</p>
+                <p>Node.js · Express Framework</p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="/">Trang chủ</a>
+                <a href="/about">Giới thiệu</a>
+                <a href="/skills">Kỹ năng</a>
+                <a href="/hobbies">Sở thích</a>
+                <a href="/contact">Liên hệ</a>
+                <a href="/404-test">Kiểm tra lỗi 404</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 BAO.DEV |
+            Designed with HTML, CSS & JavaScript
+        </div>
+
+    </footer>
+
+    <button id="backToTop"
+            class="back-to-top"
+            aria-label="Về đầu trang">
+        ↑
+    </button>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
